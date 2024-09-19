@@ -1,0 +1,26 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 7rem;
+  margin-right: 3rem;
+  &:first-child {
+    margin-top: 2rem;
+  }
+  &__profile-icon {
+    margin: 1.5rem 0rem;
+    display: inline-block;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 100%;
+    color: rgba($color: $color-black, $alpha: 0.5);
+    transition: all 0.2s;
+  }
+  &__profile-icon:hover {
+    padding: 0.4rem;
+    transform: scale(1.5);
+    background-color: $color-black;
+    stroke: rgba($color: $color-white, $alpha: 0.8);
+  }
+}
