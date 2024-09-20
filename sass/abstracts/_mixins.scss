@@ -46,3 +46,143 @@
     }
   }
 }
+
+
+@mixin card-styles ($progress-bar-color: #3dbbe5, $add-icon-color: #3dbbe5, $button-back-color:rgba(62, 187, 229, 0.14), $percentage-val: 90%){
+  padding: 1rem 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  height: 21rem;
+  width: 24rem;
+  border-radius: 2.5rem;
+
+  .projects__cards__card__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .projects__cards__card__row__date {
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    .projects__cards__card__row__icon {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      cursor: pointer;
+
+      &__1 {
+        background-color: #000000;
+        height: 0.4rem;
+        width: 0.4rem;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .projects__cards__card__main-heading {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .projects__cards__card__sub-heading {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+  }
+
+  .projects__cards__card__progress-tittle {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0.5rem 0;
+  }
+
+  .projects__cards__card__progress {
+    height: 0.5rem;
+    background-color: #dddddddd;
+    border-radius: 10px;
+
+    &__container {
+      height: 100%;
+      border-radius: 10px;
+      background-color: $progress-bar-color;
+      width: $percentage-val;
+    }
+  }
+
+  .projects__cards__card__progress-amount {
+    margin-left: auto;
+    padding: 0.5rem 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .projects__cards__card__border {
+    width: inherit;
+    // height: 0.1rem;
+    margin-left: -1.5rem;
+    // position: absolute;
+    border-bottom: 0.2rem solid rgba(172, 170, 170, 0.1);
+  }
+
+  .projects__cards__card__extras {
+    display: flex;
+    margin: 1.5rem 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    &__image {
+      display: flex;
+
+      &__1,
+      &__2 {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+      }
+
+      &__2 {
+        margin-left: -2px;
+      }
+    }
+
+    &__add-div {
+      margin: 0 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      padding: 0.4rem;
+      background-color: $add-icon-color;
+      border-radius: 50%;
+      font-size: 2rem;
+
+      &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        stroke: white;
+      }
+    }
+
+    &__timelimit {
+      height: 100%;
+      text-align: center;
+      margin-left: auto;
+      padding: 1rem 2rem;
+      border-radius: 3rem;
+      background-color: $button-back-color;
+      color: $add-icon-color;
+      font-weight: 600;
+      // font-size: 1rem;
+      cursor: pointer;
+      stroke-width: 10px;
+    }
+  }
+}

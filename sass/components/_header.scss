@@ -49,8 +49,11 @@
   }
   &__notification-div {
     position: relative;
+    cursor: pointer;
+    
   }
   .notification-dot {
+    cursor: pointer;
     display: block;
     z-index: 100;
     position: absolute;
