@@ -6,12 +6,13 @@
   row-gap: 3rem;
   height: 43rem;
   overflow: scroll;
-  ::-webkit-scrollbar{
+  ::-webkit-scrollbar {
     display: none;
   }
   position: relative;
   &__card {
     @include card-styles;
+    
   }
   &__card1 {
     @include card-styles(#f1703d, #f1703d, rgba(241, 112, 61, 0.06), 30%);
