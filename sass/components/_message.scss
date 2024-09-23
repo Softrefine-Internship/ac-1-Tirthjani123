@@ -1,0 +1,109 @@
+.clientMsg {
+  height: 90vh;
+  width: 100%;
+  margin-top: 1rem;
+  &__heading {
+
+    padding: 4rem 2rem 2rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba($color: #000000, $alpha: 0.7);
+    &__h2 {
+      font-size: 2.4rem;
+    }
+    &__icons__1 {
+      margin-left: auto;
+      width: 1.8rem;
+      stroke: rgba($color: #000000, $alpha: 0.7);
+      stroke-width: 2px;
+    }
+    &__icons__2 {
+      width: 2rem;
+      height: 3rem;
+    }
+  }
+  &__border {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.141);
+  }
+  &__message {
+    display: flex;
+    align-items: center;
+    padding: 2rem 2rem;
+    transition: all 0.1s;
+    backface-visibility: hidden;
+
+    &__img {
+      border-radius: 50%;
+      height: 5.5rem;
+      width: 5.5rem;
+      margin: 0 2rem;
+    }
+    &__content {
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        &__name {
+          font-size: 2rem;
+          color: rgba($color: #000000, $alpha: 0.7);
+        }
+        &__star {
+          cursor: pointer;
+          font-size: 1rem;
+          height: 2rem;
+          width: 2rem;
+        }
+        &__star:hover {
+          fill: #000000;
+        }
+      }
+      &__msg {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: rgba($color: #000000, $alpha: 0.6);
+      }
+      &__date {
+        text-align: end;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: rgba($color: #000000, $alpha: 0.4);
+      }
+    }
+
+    &:hover {
+      border-radius: 1rem;
+      border-bottom: none;
+      background-color: $color-white;
+      transform: translateY(0.5rem);
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  }
+}
+.message {
+  overflow: scroll;
+  height: 54rem;
+  margin: 1rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.doto-icon{
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    width:  2rem;
+    &_1,&_2{
+        height: .5rem;
+        width: .5rem;
+        border-radius: 50%;
+        background-color: #000000;
+    }
+}

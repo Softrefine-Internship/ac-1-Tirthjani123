@@ -1,5 +1,5 @@
 .header {
-  padding: 2rem, 0;
+  margin: 2rem, 0;
   display: flex;
   align-items: center;
   width: 100%;
@@ -15,7 +15,7 @@
   }
   &__search {
     height: 100%;
-    width: 25rem;
+    width: 45rem;
     justify-content: start;
     align-content: center;
     background-color: $color-white;
@@ -45,12 +45,18 @@
   &__notification-icon {
     padding: 0 0.5rem;
     font-size: 3rem;
-    border-right: 1px solid rgba($color: #000000, $alpha: 0.2);
+    // border-right: 1px solid rgba($color: #000000, $alpha: 0.2);
+    &:hover {
+      animation-name: shake;
+      animation-timing-function: ease-in-out;
+      animation-duration: 0.5s;
+      animation-iteration-count: 2;
+      animation-delay: 0.5s;
+    }
   }
   &__notification-div {
     position: relative;
     cursor: pointer;
-    
   }
   .notification-dot {
     cursor: pointer;
@@ -73,5 +79,6 @@
   &__username {
     font-size: 2.5rem;
     font-weight: bold;
+    padding-right: 3rem;
   }
 }

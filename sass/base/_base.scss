@@ -27,7 +27,11 @@ html {
 body {
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 3rem;
+  // padding: 1rem;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+  display: none;
+}
 }
 
 main{
@@ -36,7 +40,7 @@ main{
 
 .content{
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 65% 35%;
 }
 img,svg{
   cursor: pointer;
