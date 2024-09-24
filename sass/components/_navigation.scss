@@ -15,11 +15,17 @@
     border-radius: 100%;
     color: rgba($color: $color-black, $alpha: 0.5);
     transition: all 0.2s;
+    &:first-child {
+      padding: 0.4rem;
+      transform: scale(1.5);
+      background-color: $color-black;
+      stroke: rgba($color: $color-white, $alpha: 0.8);
+    }
   }
   &__profile-icon:hover {
-    padding: 0.4rem;
-    transform: scale(1.5);
-    background-color: $color-black;
-    stroke: rgba($color: $color-white, $alpha: 0.8);
+    // padding: 0.4rem;
+    // transform: scale(1.5);
+    // background-color: $color-black;
+    // stroke: rgba($color: $color-white, $alpha: 0.8);
   }
 }

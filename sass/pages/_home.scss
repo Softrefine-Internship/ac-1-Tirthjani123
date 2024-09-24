@@ -1,15 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 .porfolio {
   margin: 0 auto;
-  padding: 0rem 0rem 0rem 3rem ;
+  padding: 0rem 0rem 0rem 3rem;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
   padding-top: 2rem;
   width: 90%;
+  height: 70rem;
+  @media (min-width:48em) {
+    height: 88rem;
+  }
+  @media (min-width: 62em) {
+    height: 88rem;
+  }
+  @media (min-width: 75em) {
+    height: 80rem;
+  }
   background-color: $color-white-faded;
   border-radius: 4rem;
+  margin-top: 2.5rem;
 }
 ion-icon:hover {
   cursor: pointer;
 }
-
-.content{
+.content {
   width: 100%;
 }
