@@ -1,15 +1,34 @@
 .projects__cards {
-  margin-top:4rem;
+  margin-top: 4rem;
   display: grid;
   align-items: center;
   justify-content: center;
   padding: 0 5rem 0rem 0rem;
   padding-left: 5rem;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 4rem;
-  gap:8rem;
-  height:48rem;
-  overflow: scroll;
+  grid-template-columns: 1fr 1fr 1fr;
+  @include respond(95.25) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include respond(63) {
+    grid-template-columns: 1fr;
+  }
+  @include respond(56.25) {
+    height: 69rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 1rem 0 1rem;
+  }
+  @include respond(48) {
+    height: 76rem;
+  }
+  @include respond(37.5) {
+    height: 90rem;
+  }
+  @include respond(29) {
+    grid-template-columns: 1fr;
+  }
+  gap: 2rem;
+  height: 65vh;
+  overflow-y: scroll;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -17,11 +36,11 @@
     @include card-styles;
   }
   &__card1 {
-    @include card-styles(#f1703d, #f1703d, #ffffff, 30%,#ffffff);
+    @include card-styles(#f1703d, #f1703d, #ffffff, 30%, #ffffff);
     background-color: $color-orange;
   }
   &__card2 {
-    @include card-styles(#14c75a, #14c75a, #ffffff, 50%,#ffffff);
+    @include card-styles(#14c75a, #14c75a, #ffffff, 50%, #ffffff);
     background-color: $color-green;
   }
   &__card3 {
@@ -35,9 +54,7 @@
   width: 100%;
 }
 
-.temp2{
-  // display: flex;
+.temp2 {
   justify-content: center;
   align-items: center;
-
 }

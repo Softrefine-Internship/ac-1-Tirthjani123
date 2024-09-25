@@ -7,17 +7,30 @@
     width: 3rem;
     height: 3rem;
     padding: 0 2rem;
+    @include respond(29) {
+      width: 4rem;
+      height: 4rem;
+    }
   }
   .logo-name {
     font-size: 3rem;
     font-weight: bold;
     padding: 0 7rem;
-    
+    @include respond(63) {
+      padding: 0 7rem;
+    }
+    @include respond(29) {
+      padding: 0 2rem;
+    }
   }
   &__search {
     height: 100%;
-    width: 45rem;
+    width: 40%;
+    @include respond(63) {
+      width: 32%;
+    }
     justify-content: start;
+    position: relative;
     align-content: center;
     background-color: $color-white;
     display: flex;
@@ -25,9 +38,18 @@
     border-radius: 3rem;
     color: $color-black;
     font-size: 1.2rem;
-    &__search-icon {
+    &__icon {
       padding-right: 1rem;
       font-size: 1.5rem;
+    }
+    &__input {
+      width: 100%;
+      &:active,
+      &:focus {
+        border: none;
+        outline: none;
+      }
+      border: none;
     }
   }
   &__add-div {
@@ -37,8 +59,8 @@
     align-items: center;
     cursor: pointer;
     margin-left: auto;
-    font-size: 1.5rem;
-    padding: 1rem;
+    font-size: 2rem;
+    padding: 0.5rem;
     border-radius: 100%;
     color: $color-white;
     background-color: $color-black;
@@ -70,16 +92,44 @@
     border-radius: 50%;
     right: 10px;
     width: 10px;
+    @include respond(75) {
+      height: 0.8rem;
+      width: 0.8rem;
+      right: 9px;
+      top: 2px;
+    }
+    @include respond(48) {
+      height: 0.9rem;
+      width: 0.9rem;
+      right: 0.8rem;
+      top: 2px;
+    }
   }
   &__profile-photo {
     margin: 0 1rem 0 2rem;
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
+    @include respond(56.25) {
+      display: none;
+    }
   }
   &__username {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     padding-right: 3rem;
+    @include respond(29) {
+   display: none;
   }
+  }
+}
+.search-bar {
+  width: 100%;
+  padding: 10px 15px;
+  padding-left: 40px; /* Spacing for the icon */
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }

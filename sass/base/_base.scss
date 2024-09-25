@@ -4,22 +4,34 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  font-family: "Roboto", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 html {
   // this defines what 1 rem is
   font-size: 62.5%; // 1 rem = 10px/16px = 62.5%
 
-  @include respond(tab-land) {
-    font-size: 56.25%;
+  @include respond(95.25) {
+    font-size: 62.5%;
   }
-  @include respond(tab-port) {
+  @include respond(75) {
+    font-size: 58%;
+  }
+  @include respond(63) {
+    font-size: 56%;
+  }
+  @include respond(56.25) {
     font-size: 50%;
   }
-  @include respond(phone) {
-    font-size: 30%;
+  @include respond(48) {
+    font-size: 47%;
   }
-  @include respond(big-dektop) {
+  @include respond(37.5) {
+    font-size: 40%;
+  }
+  @include respond(29) {
+    font-size: 40%;
+  }
+  @include respond(112.5) {
     font-size: 75%;
   }
 }
@@ -27,21 +39,21 @@ html {
 body {
   box-sizing: border-box;
   margin: 0 auto;
-  // padding: 1rem;
-  overflow: scroll;
-  &::-webkit-scrollbar {
-  display: none;
-}
+  overflow: hidden;
 }
 
-main{
-  display: flex;  
+main {
+  display: flex;
 }
 
-.content{
+.content {
   display: grid;
   grid-template-columns: 65% 35%;
+  @include respond(48) {
+    grid-template-columns: 1fr;
+  }
 }
-img,svg{
+img,
+svg {
   cursor: pointer;
 }

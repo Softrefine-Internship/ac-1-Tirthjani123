@@ -25,36 +25,118 @@
 */
 
 @mixin respond($breakpoint) {
-  @if $breakpoint == phone {
+   @if $breakpoint == 29 {
+    @media (max-width: 29em) {
+      @content;
+    }
+  }
+  @if $breakpoint == 37.5 {
     @media (max-width: 37.5em) {
       @content;
     }
   }
-  @if $breakpoint == tab-port {
+  @if $breakpoint == 48 {
+    @media (max-width: 48em) {
+      @content;
+    }
+  }
+  @if $breakpoint == 56.25 {
     @media (max-width: 56.25em) {
       @content;
     }
   }
-  @if $breakpoint == tab-land {
+  @if $breakpoint == 63 {
+    @media (max-width: 63em) {
+      @content;
+    }
+  }
+  @if $breakpoint == 75 {
     @media (max-width: 75em) {
       @content;
     }
   }
-  @if $breakpoint == big-dektop {
+  @if $breakpoint == 95.25 {
+    @media (max-width: 95.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == 112.5 {
     @media (min-width: 112.5em) {
       @content;
     }
   }
 }
 
-
-@mixin card-styles ($progress-bar-color: #3dbbe5, $add-icon-color: #3dbbe5, $button-back-color:rgba(62, 187, 229, 0.14), $percentage-val: 90%,$loading-style:#dddddddd){
+@mixin card-styles(
+  $progress-bar-color: #3dbbe5,
+  $add-icon-color: #3dbbe5,
+  $button-back-color: rgba(62, 187, 229, 0.14),
+  $percentage-val: 90%,
+  $loading-style: #dddddddd
+) {
   padding: 1rem 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
-  // height: 25rem;
-  // width: 25rem;
+  margin: 0 0 3rem 1rem;
+  height: 25rem;
+  width: 25rem;
+  @include respond(95.25) {
+    height: 27rem;
+    width: 27rem;
+  }
+  @include respond(63) {
+    height: 27rem;
+    width: 27rem;
+  }
+  @include respond(56.25) {
+    height: 25rem;
+    width: 25rem;
+  }
+  @include respond(48) {
+    height: 30rem;
+    width: 30rem;
+  }
   border-radius: 4rem;
- 
+  place-self: center;
+  cursor: pointer;
+  position: relative;
+
+  transition: all 0.3s;
+
+  &::after {
+    content: "";
+    height: 0.3rem;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    background-color: $progress-bar-color;
+    transform: translateX(-48%);
+    bottom: -2rem;
+    border-radius: 50rem;
+    opacity: 0;
+
+    transition: all 0.3s;
+  }
+  &::before {
+    content: "";
+    height: 0.3rem;
+    width: 75%;
+    position: absolute;
+    background-color: $progress-bar-color;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-48%);
+    bottom: -10px;
+    border-radius: 50rem;
+
+    transition: all 0.3s;
+  }
+  &:hover {
+    &::after,
+    &::before {
+      opacity: 0.5;
+    }
+  }
+
   .projects__cards__card__row {
     margin-top: 1rem;
     display: flex;
@@ -64,6 +146,9 @@
     .projects__cards__card__row__date {
       font-weight: 700;
       color: rgba(0, 0, 0, 0.5);
+      @include respond(48) {
+        font-size: 1.5rem;
+      }
     }
 
     .projects__cards__card__row__icon {
@@ -78,6 +163,10 @@
         height: 0.4rem;
         width: 0.4rem;
         border-radius: 50%;
+        @include respond(48) {
+          height: 0.5rem;
+          width: 0.5rem;
+        }
       }
     }
   }
@@ -87,6 +176,9 @@
     margin-top: 2rem;
     font-size: 1.7rem;
     color: rgba(0, 0, 0, 0.8);
+    @include respond(48) {
+      font-size: 2.5rem;
+    }
   }
 
   .projects__cards__card__sub-heading {
@@ -94,6 +186,9 @@
     margin-top: 0.5rem;
     color: rgba(0, 0, 0, 0.5);
     margin-bottom: 2rem;
+    @include respond(48) {
+      font-size: 1.7rem;
+    }
   }
 
   .projects__cards__card__progress-tittle {
@@ -101,12 +196,19 @@
     font-size: 1.2rem;
     color: rgba(0, 0, 0, 0.8);
     margin: 0.5rem 0;
+    @include respond(48) {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
   }
 
   .projects__cards__card__progress {
     height: 0.5rem;
     background-color: $loading-style;
     border-radius: 10px;
+    @include respond(48) {
+      height: 0.7rem;
+    }
 
     &__container {
       height: 100%;
@@ -127,7 +229,23 @@
   .projects__cards__card__border {
     width: inherit;
     margin-left: -1.5rem;
+    margin: 1.6rem 0;
     border-bottom: 0.2rem solid rgba(172, 170, 170, 0.1);
+    @include respond(95.25) {
+      margin-left: -1.4rem;
+    }
+    @include respond(75) {
+      margin-left: -1.7rem;
+    }
+    @include respond(63) {
+      margin-left: -1.8rem;
+    }
+    @include respond(56.25) {
+      margin-left: -1.5rem;
+    }
+    @include respond(48) {
+      margin-left: -1.8rem;
+    }
   }
 
   .projects__cards__card__extras {
@@ -136,15 +254,19 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-
     &__image {
       display: flex;
 
       &__1,
       &__2 {
+        border: 1px solid $color-white;
         height: 2rem;
         width: 2rem;
         border-radius: 50%;
+        @include respond(48) {
+          height: 3rem;
+          width: 3rem;
+        }
       }
 
       &__2 {
@@ -167,6 +289,10 @@
         width: 1.5rem;
         height: 1.5rem;
         stroke: white;
+        @include respond(48) {
+          height: 2.2rem;
+          width: 2.2rem;
+        }
       }
     }
 
@@ -179,9 +305,12 @@
       background-color: $button-back-color;
       color: $add-icon-color;
       font-weight: 900;
-      // font-size: 1rem;
+
       cursor: pointer;
       stroke-width: 10px;
+      @include respond(48) {
+        font-size:1.5rem;
+      }
     }
   }
 }

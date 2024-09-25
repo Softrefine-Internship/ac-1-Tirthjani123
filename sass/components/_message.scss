@@ -2,8 +2,8 @@
   height: 90vh;
   width: 100%;
   margin-top: 1rem;
+  
   &__heading {
-
     padding: 4rem 2rem 2rem 2rem;
     display: flex;
     justify-content: center;
@@ -30,6 +30,7 @@
   }
   &__message {
     display: flex;
+    gap: 1.8rem;
     align-items: center;
     padding: 2rem 2rem;
     transition: all 0.1s;
@@ -39,9 +40,10 @@
       border-radius: 50%;
       height: 5.5rem;
       width: 5.5rem;
-      margin: 0 2rem;
+      // margin: 0 2rem;
     }
     &__content {
+      width: 100%;
       &__header {
         display: flex;
         justify-content: space-between;
@@ -84,26 +86,34 @@
   }
 }
 .message {
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   height: 54rem;
   margin: 1rem;
   &::-webkit-scrollbar {
     display: none;
   }
+  @include respond(75) {
+    height: 60rem;
+  }
+  @include respond(56.25){
+    height:74rem;
+  }
 }
-.doto-icon{
-    display: flex;
-    cursor: pointer;
-    flex-direction: column;
-    height: 2rem;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-    width:  2rem;
-    &_1,&_2{
-        height: .5rem;
-        width: .5rem;
-        border-radius: 50%;
-        background-color: #000000;
-    }
+.doto-icon {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 2rem;
+  &_1,
+  &_2 {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    background-color: #000000;
+  }
 }
