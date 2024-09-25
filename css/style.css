@@ -35,7 +35,7 @@ html {
       font-size: 40%; } }
   @media (min-width: 112.5em) {
     html {
-      font-size: 75%; } }
+      font-size: 62.5%; } }
 
 body {
   box-sizing: border-box;
@@ -74,7 +74,8 @@ svg {
   margin: 2rem, 0;
   display: flex;
   align-items: center;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   .header__logo {
     width: 3rem;
     height: 3rem;
@@ -89,10 +90,13 @@ svg {
     padding: 0 7rem; }
     @media (max-width: 63em) {
       .header .logo-name {
-        padding: 0 7rem; } }
+        padding: 0 5rem; } }
     @media (max-width: 29em) {
       .header .logo-name {
         padding: 0 2rem; } }
+    @media (max-width: 37.5em) {
+      .header .logo-name {
+        padding: 0 3rem; } }
   .header__search {
     height: 100%;
     width: 40%;
@@ -107,7 +111,7 @@ svg {
     font-size: 1.2rem; }
     @media (max-width: 63em) {
       .header__search {
-        width: 32%; } }
+        width: 30%; } }
     .header__search__icon {
       padding-right: 1rem;
       font-size: 1.5rem; }
@@ -169,10 +173,11 @@ svg {
     height: 4rem;
     width: 4rem;
     border-radius: 50%; }
-    @media (max-width: 56.25em) {
+    @media (max-width: 37.5em) {
       .header__profile-photo {
-        display: none; } }
+        margin: 0 0.5rem 0 2rem; } }
   .header__username {
+    display: inline-block;
     font-size: 2rem;
     font-weight: bold;
     padding-right: 3rem; }
@@ -284,8 +289,9 @@ svg {
   padding-left: 5rem;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
-  height: 65vh;
-  overflow-y: scroll; }
+  height: 75%;
+  overflow-y: scroll;
+  overflow-x: hidden; }
   @media (max-width: 95.25em) {
     .projects__cards {
       grid-template-columns: 1fr 1fr; } }
@@ -294,15 +300,8 @@ svg {
       grid-template-columns: 1fr; } }
   @media (max-width: 56.25em) {
     .projects__cards {
-      height: 69rem;
       grid-template-columns: 1fr 1fr;
       padding: 0 1rem 0 1rem; } }
-  @media (max-width: 48em) {
-    .projects__cards {
-      height: 76rem; } }
-  @media (max-width: 37.5em) {
-    .projects__cards {
-      height: 90rem; } }
   @media (max-width: 29em) {
     .projects__cards {
       grid-template-columns: 1fr; } }
@@ -319,6 +318,9 @@ svg {
     cursor: pointer;
     position: relative;
     transition: all 0.3s; }
+    @media (max-width: 37.5em) {
+      .projects__cards__card {
+        margin: 0 0 4rem 2rem; } }
     @media (max-width: 95.25em) {
       .projects__cards__card {
         height: 27rem;
@@ -347,6 +349,9 @@ svg {
       border-radius: 50rem;
       opacity: 0;
       transition: all 0.3s; }
+      @media (max-width: 37.5em) {
+        .projects__cards__card::after {
+          bottom: -15px; } }
     .projects__cards__card::before {
       content: "";
       height: 0.3rem;
@@ -359,6 +364,9 @@ svg {
       bottom: -10px;
       border-radius: 50rem;
       transition: all 0.3s; }
+      @media (max-width: 37.5em) {
+        .projects__cards__card::before {
+          bottom: -10px; } }
     .projects__cards__card:hover::after, .projects__cards__card:hover::before {
       opacity: 0.5; }
     .projects__cards__card .projects__cards__card__row {
@@ -368,6 +376,7 @@ svg {
       justify-content: center; }
       .projects__cards__card .projects__cards__card__row .projects__cards__card__row__date {
         font-weight: 700;
+        font-size: 1.2rem;
         color: rgba(0, 0, 0, 0.5); }
         @media (max-width: 48em) {
           .projects__cards__card .projects__cards__card__row .projects__cards__card__row__date {
@@ -390,7 +399,7 @@ svg {
     .projects__cards__card .projects__cards__card__main-heading {
       text-align: center;
       margin-top: 2rem;
-      font-size: 1.7rem;
+      font-size: 2rem;
       color: rgba(0, 0, 0, 0.8); }
       @media (max-width: 48em) {
         .projects__cards__card .projects__cards__card__main-heading {
@@ -398,6 +407,7 @@ svg {
     .projects__cards__card .projects__cards__card__sub-heading {
       text-align: center;
       margin-top: 0.5rem;
+      font-size: 1.7rem;
       color: rgba(0, 0, 0, 0.5);
       margin-bottom: 2rem; }
       @media (max-width: 48em) {
@@ -405,7 +415,7 @@ svg {
           font-size: 1.7rem; } }
     .projects__cards__card .projects__cards__card__progress-tittle {
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       color: rgba(0, 0, 0, 0.8);
       margin: 0.5rem 0; }
       @media (max-width: 48em) {
@@ -428,12 +438,12 @@ svg {
       margin-left: auto;
       padding: 0.5rem 0;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       color: rgba(0, 0, 0, 0.8); }
     .projects__cards__card .projects__cards__card__border {
       width: inherit;
+      margin: 0.6rem 0;
       margin-left: -1.5rem;
-      margin: 1.6rem 0;
       border-bottom: 0.2rem solid rgba(172, 170, 170, 0.1); }
       @media (max-width: 95.25em) {
         .projects__cards__card .projects__cards__card__border {
@@ -460,15 +470,15 @@ svg {
         display: flex; }
         .projects__cards__card .projects__cards__card__extras__image__1, .projects__cards__card .projects__cards__card__extras__image__2 {
           border: 1px solid #FFFFFF;
-          height: 2rem;
-          width: 2rem;
+          height: 2.5rem;
+          width: 2.5rem;
           border-radius: 50%; }
           @media (max-width: 48em) {
             .projects__cards__card .projects__cards__card__extras__image__1, .projects__cards__card .projects__cards__card__extras__image__2 {
               height: 3rem;
               width: 3rem; } }
         .projects__cards__card .projects__cards__card__extras__image__2 {
-          margin-left: -2px; }
+          margin-left: -4px; }
       .projects__cards__card .projects__cards__card__extras__add-div {
         margin: 0 0.5rem;
         display: flex;
@@ -496,6 +506,7 @@ svg {
         background-color: rgba(62, 187, 229, 0.14);
         color: #3dbbe5;
         font-weight: 900;
+        font-size: 1.2rem;
         cursor: pointer;
         stroke-width: 10px; }
         @media (max-width: 48em) {
@@ -513,6 +524,9 @@ svg {
     position: relative;
     transition: all 0.3s;
     background-color: #FDE5CC; }
+    @media (max-width: 37.5em) {
+      .projects__cards__card1 {
+        margin: 0 0 4rem 2rem; } }
     @media (max-width: 95.25em) {
       .projects__cards__card1 {
         height: 27rem;
@@ -541,6 +555,9 @@ svg {
       border-radius: 50rem;
       opacity: 0;
       transition: all 0.3s; }
+      @media (max-width: 37.5em) {
+        .projects__cards__card1::after {
+          bottom: -15px; } }
     .projects__cards__card1::before {
       content: "";
       height: 0.3rem;
@@ -553,6 +570,9 @@ svg {
       bottom: -10px;
       border-radius: 50rem;
       transition: all 0.3s; }
+      @media (max-width: 37.5em) {
+        .projects__cards__card1::before {
+          bottom: -10px; } }
     .projects__cards__card1:hover::after, .projects__cards__card1:hover::before {
       opacity: 0.5; }
     .projects__cards__card1 .projects__cards__card__row {
@@ -562,6 +582,7 @@ svg {
       justify-content: center; }
       .projects__cards__card1 .projects__cards__card__row .projects__cards__card__row__date {
         font-weight: 700;
+        font-size: 1.2rem;
         color: rgba(0, 0, 0, 0.5); }
         @media (max-width: 48em) {
           .projects__cards__card1 .projects__cards__card__row .projects__cards__card__row__date {
@@ -584,7 +605,7 @@ svg {
     .projects__cards__card1 .projects__cards__card__main-heading {
       text-align: center;
       margin-top: 2rem;
-      font-size: 1.7rem;
+      font-size: 2rem;
       color: rgba(0, 0, 0, 0.8); }
       @media (max-width: 48em) {
         .projects__cards__card1 .projects__cards__card__main-heading {
@@ -592,6 +613,7 @@ svg {
     .projects__cards__card1 .projects__cards__card__sub-heading {
       text-align: center;
       margin-top: 0.5rem;
+      font-size: 1.7rem;
       color: rgba(0, 0, 0, 0.5);
       margin-bottom: 2rem; }
       @media (max-width: 48em) {
@@ -599,7 +621,7 @@ svg {
           font-size: 1.7rem; } }
     .projects__cards__card1 .projects__cards__card__progress-tittle {
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       color: rgba(0, 0, 0, 0.8);
       margin: 0.5rem 0; }
       @media (max-width: 48em) {
@@ -622,12 +644,12 @@ svg {
       margin-left: auto;
       padding: 0.5rem 0;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       color: rgba(0, 0, 0, 0.8); }
     .projects__cards__card1 .projects__cards__card__border {
       width: inherit;
+      margin: 0.6rem 0;
       margin-left: -1.5rem;
-      margin: 1.6rem 0;
       border-bottom: 0.2rem solid rgba(172, 170, 170, 0.1); }
       @media (max-width: 95.25em) {
         .projects__cards__card1 .projects__cards__card__border {
@@ -654,15 +676,15 @@ svg {
         display: flex; }
         .projects__cards__card1 .projects__cards__card__extras__image__1, .projects__cards__card1 .projects__cards__card__extras__image__2 {
           border: 1px solid #FFFFFF;
-          height: 2rem;
-          width: 2rem;
+          height: 2.5rem;
+          width: 2.5rem;
           border-radius: 50%; }
           @media (max-width: 48em) {
             .projects__cards__card1 .projects__cards__card__extras__image__1, .projects__cards__card1 .projects__cards__card__extras__image__2 {
               height: 3rem;
               width: 3rem; } }
         .projects__cards__card1 .projects__cards__card__extras__image__2 {
-          margin-left: -2px; }
+          margin-left: -4px; }
       .projects__cards__card1 .projects__cards__card__extras__add-div {
         margin: 0 0.5rem;
         display: flex;
@@ -690,6 +712,7 @@ svg {
         background-color: #ffffff;
         color: #f1703d;
         font-weight: 900;
+        font-size: 1.2rem;
         cursor: pointer;
         stroke-width: 10px; }
         @media (max-width: 48em) {
@@ -707,6 +730,9 @@ svg {
     position: relative;
     transition: all 0.3s;
     background-color: #B4F1CE; }
+    @media (max-width: 37.5em) {
+      .projects__cards__card2 {
+        margin: 0 0 4rem 2rem; } }
     @media (max-width: 95.25em) {
       .projects__cards__card2 {
         height: 27rem;
@@ -735,6 +761,9 @@ svg {
       border-radius: 50rem;
       opacity: 0;
       transition: all 0.3s; }
+      @media (max-width: 37.5em) {
+        .projects__cards__card2::after {
+          bottom: -15px; } }
     .projects__cards__card2::before {
       content: "";
       height: 0.3rem;
@@ -747,6 +776,9 @@ svg {
       bottom: -10px;
       border-radius: 50rem;
       transition: all 0.3s; }
+      @media (max-width: 37.5em) {
+        .projects__cards__card2::before {
+          bottom: -10px; } }
     .projects__cards__card2:hover::after, .projects__cards__card2:hover::before {
       opacity: 0.5; }
     .projects__cards__card2 .projects__cards__card__row {
@@ -756,6 +788,7 @@ svg {
       justify-content: center; }
       .projects__cards__card2 .projects__cards__card__row .projects__cards__card__row__date {
         font-weight: 700;
+        font-size: 1.2rem;
         color: rgba(0, 0, 0, 0.5); }
         @media (max-width: 48em) {
           .projects__cards__card2 .projects__cards__card__row .projects__cards__card__row__date {
@@ -778,7 +811,7 @@ svg {
     .projects__cards__card2 .projects__cards__card__main-heading {
       text-align: center;
       margin-top: 2rem;
-      font-size: 1.7rem;
+      font-size: 2rem;
       color: rgba(0, 0, 0, 0.8); }
       @media (max-width: 48em) {
         .projects__cards__card2 .projects__cards__card__main-heading {
@@ -786,6 +819,7 @@ svg {
     .projects__cards__card2 .projects__cards__card__sub-heading {
       text-align: center;
       margin-top: 0.5rem;
+      font-size: 1.7rem;
       color: rgba(0, 0, 0, 0.5);
       margin-bottom: 2rem; }
       @media (max-width: 48em) {
@@ -793,7 +827,7 @@ svg {
           font-size: 1.7rem; } }
     .projects__cards__card2 .projects__cards__card__progress-tittle {
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       color: rgba(0, 0, 0, 0.8);
       margin: 0.5rem 0; }
       @media (max-width: 48em) {
@@ -816,12 +850,12 @@ svg {
       margin-left: auto;
       padding: 0.5rem 0;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       color: rgba(0, 0, 0, 0.8); }
     .projects__cards__card2 .projects__cards__card__border {
       width: inherit;
+      margin: 0.6rem 0;
       margin-left: -1.5rem;
-      margin: 1.6rem 0;
       border-bottom: 0.2rem solid rgba(172, 170, 170, 0.1); }
       @media (max-width: 95.25em) {
         .projects__cards__card2 .projects__cards__card__border {
@@ -848,15 +882,15 @@ svg {
         display: flex; }
         .projects__cards__card2 .projects__cards__card__extras__image__1, .projects__cards__card2 .projects__cards__card__extras__image__2 {
           border: 1px solid #FFFFFF;
-          height: 2rem;
-          width: 2rem;
+          height: 2.5rem;
+          width: 2.5rem;
           border-radius: 50%; }
           @media (max-width: 48em) {
             .projects__cards__card2 .projects__cards__card__extras__image__1, .projects__cards__card2 .projects__cards__card__extras__image__2 {
               height: 3rem;
               width: 3rem; } }
         .projects__cards__card2 .projects__cards__card__extras__image__2 {
-          margin-left: -2px; }
+          margin-left: -4px; }
       .projects__cards__card2 .projects__cards__card__extras__add-div {
         margin: 0 0.5rem;
         display: flex;
@@ -884,6 +918,7 @@ svg {
         background-color: #ffffff;
         color: #14c75a;
         font-weight: 900;
+        font-size: 1.2rem;
         cursor: pointer;
         stroke-width: 10px; }
         @media (max-width: 48em) {
@@ -901,6 +936,9 @@ svg {
     position: relative;
     transition: all 0.3s;
     background-color: #FFD3E2; }
+    @media (max-width: 37.5em) {
+      .projects__cards__card3 {
+        margin: 0 0 4rem 2rem; } }
     @media (max-width: 95.25em) {
       .projects__cards__card3 {
         height: 27rem;
@@ -929,6 +967,9 @@ svg {
       border-radius: 50rem;
       opacity: 0;
       transition: all 0.3s; }
+      @media (max-width: 37.5em) {
+        .projects__cards__card3::after {
+          bottom: -15px; } }
     .projects__cards__card3::before {
       content: "";
       height: 0.3rem;
@@ -941,6 +982,9 @@ svg {
       bottom: -10px;
       border-radius: 50rem;
       transition: all 0.3s; }
+      @media (max-width: 37.5em) {
+        .projects__cards__card3::before {
+          bottom: -10px; } }
     .projects__cards__card3:hover::after, .projects__cards__card3:hover::before {
       opacity: 0.5; }
     .projects__cards__card3 .projects__cards__card__row {
@@ -950,6 +994,7 @@ svg {
       justify-content: center; }
       .projects__cards__card3 .projects__cards__card__row .projects__cards__card__row__date {
         font-weight: 700;
+        font-size: 1.2rem;
         color: rgba(0, 0, 0, 0.5); }
         @media (max-width: 48em) {
           .projects__cards__card3 .projects__cards__card__row .projects__cards__card__row__date {
@@ -972,7 +1017,7 @@ svg {
     .projects__cards__card3 .projects__cards__card__main-heading {
       text-align: center;
       margin-top: 2rem;
-      font-size: 1.7rem;
+      font-size: 2rem;
       color: rgba(0, 0, 0, 0.8); }
       @media (max-width: 48em) {
         .projects__cards__card3 .projects__cards__card__main-heading {
@@ -980,6 +1025,7 @@ svg {
     .projects__cards__card3 .projects__cards__card__sub-heading {
       text-align: center;
       margin-top: 0.5rem;
+      font-size: 1.7rem;
       color: rgba(0, 0, 0, 0.5);
       margin-bottom: 2rem; }
       @media (max-width: 48em) {
@@ -987,7 +1033,7 @@ svg {
           font-size: 1.7rem; } }
     .projects__cards__card3 .projects__cards__card__progress-tittle {
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       color: rgba(0, 0, 0, 0.8);
       margin: 0.5rem 0; }
       @media (max-width: 48em) {
@@ -1010,12 +1056,12 @@ svg {
       margin-left: auto;
       padding: 0.5rem 0;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       color: rgba(0, 0, 0, 0.8); }
     .projects__cards__card3 .projects__cards__card__border {
       width: inherit;
+      margin: 0.6rem 0;
       margin-left: -1.5rem;
-      margin: 1.6rem 0;
       border-bottom: 0.2rem solid rgba(172, 170, 170, 0.1); }
       @media (max-width: 95.25em) {
         .projects__cards__card3 .projects__cards__card__border {
@@ -1042,15 +1088,15 @@ svg {
         display: flex; }
         .projects__cards__card3 .projects__cards__card__extras__image__1, .projects__cards__card3 .projects__cards__card__extras__image__2 {
           border: 1px solid #FFFFFF;
-          height: 2rem;
-          width: 2rem;
+          height: 2.5rem;
+          width: 2.5rem;
           border-radius: 50%; }
           @media (max-width: 48em) {
             .projects__cards__card3 .projects__cards__card__extras__image__1, .projects__cards__card3 .projects__cards__card__extras__image__2 {
               height: 3rem;
               width: 3rem; } }
         .projects__cards__card3 .projects__cards__card__extras__image__2 {
-          margin-left: -2px; }
+          margin-left: -4px; }
       .projects__cards__card3 .projects__cards__card__extras__add-div {
         margin: 0 0.5rem;
         display: flex;
@@ -1078,6 +1124,7 @@ svg {
         background-color: #ffffff;
         color: #fd71ac;
         font-weight: 900;
+        font-size: 1.2rem;
         cursor: pointer;
         stroke-width: 10px; }
         @media (max-width: 48em) {
@@ -1089,13 +1136,16 @@ svg {
   width: 100%; }
 
 .temp2 {
+  height: 100vh;
   justify-content: center;
   align-items: center; }
 
 .clientMsg {
-  height: 90vh;
   width: 100%;
   margin-top: 1rem; }
+  @media (max-width: 48em) {
+    .clientMsg {
+      display: none; } }
   .clientMsg__heading {
     padding: 4rem 2rem 2rem 2rem;
     display: flex;
@@ -1117,12 +1167,15 @@ svg {
     height: 1px;
     background-color: rgba(0, 0, 0, 0.141); }
   .clientMsg__message {
+    border-top: 1px solid #0000000f;
     display: flex;
     gap: 1.8rem;
     align-items: center;
     padding: 2rem 2rem;
     transition: all 0.1s;
     backface-visibility: hidden; }
+    .clientMsg__message:first-child {
+      border-top: none; }
     .clientMsg__message__img {
       border-radius: 50%;
       height: 5.5rem;
@@ -1161,18 +1214,18 @@ svg {
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
 
 .message {
-  overflow-y: scroll;
   overflow-x: hidden;
-  height: 54rem;
+  overflow-y: scroll;
+  height: 76vh;
   margin: 1rem; }
   .message::-webkit-scrollbar {
     display: none; }
   @media (max-width: 75em) {
     .message {
-      height: 60rem; } }
+      height: 77vh; } }
   @media (max-width: 56.25em) {
     .message {
-      height: 74rem; } }
+      height: 77vh; } }
 
 .doto-icon {
   display: flex;
@@ -1193,13 +1246,11 @@ svg {
   height: 100vh;
   width: 100%;
   position: relative;
-  background-color: #FFD3E2;
   justify-content: center;
   align-items: center;
-  overflow: hidden; }
+  overflow-y: hidden; }
 
 .porfolio {
-  overflow: hidden;
   height: 95vh;
   width: 95vw;
   position: absolute;

@@ -13,22 +13,23 @@
     grid-template-columns: 1fr;
   }
   @include respond(56.25) {
-    height: 69rem;
+    // height: 69rem;
     grid-template-columns: 1fr 1fr;
     padding: 0 1rem 0 1rem;
   }
   @include respond(48) {
-    height: 76rem;
+    // height: 76rem;
   }
   @include respond(37.5) {
-    height: 90rem;
+    // height: 90rem;
   }
   @include respond(29) {
     grid-template-columns: 1fr;
   }
   gap: 2rem;
-  height: 65vh;
+  height:75%;
   overflow-y: scroll;
+  overflow-x: hidden;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -50,11 +51,13 @@
 }
 
 .temp {
+  // height: 100vh; 
   display: flex;
   width: 100%;
 }
 
 .temp2 {
+  height: 100vh;  
   justify-content: center;
   align-items: center;
 }

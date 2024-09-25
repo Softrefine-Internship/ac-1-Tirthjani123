@@ -1,8 +1,10 @@
 .clientMsg {
-  height: 90vh;
+  // height: 90vh;
   width: 100%;
   margin-top: 1rem;
-  
+  @include respond(48) {
+    display: none;
+  }
   &__heading {
     padding: 4rem 2rem 2rem 2rem;
     display: flex;
@@ -29,6 +31,10 @@
     background-color: rgba(0, 0, 0, 0.141);
   }
   &__message {
+    border-top: 1px solid #0000000f;
+    &:first-child {
+      border-top: none;
+    }
     display: flex;
     gap: 1.8rem;
     align-items: center;
@@ -86,18 +92,18 @@
   }
 }
 .message {
-  overflow-y: scroll;
   overflow-x: hidden;
-  height: 54rem;
+  overflow-y: scroll;
+  height: 76vh;
   margin: 1rem;
   &::-webkit-scrollbar {
     display: none;
   }
   @include respond(75) {
-    height: 60rem;
+    height: 77vh;
   }
-  @include respond(56.25){
-    height:74rem;
+  @include respond(56.25) {
+    height: 77vh;
   }
 }
 .doto-icon {

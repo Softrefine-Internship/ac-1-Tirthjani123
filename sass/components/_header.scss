@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   width: 100%;
+  position: relative;
   &__logo {
     width: 3rem;
     height: 3rem;
@@ -17,23 +18,31 @@
     font-weight: bold;
     padding: 0 7rem;
     @include respond(63) {
-      padding: 0 7rem;
+      padding: 0 5rem;
     }
     @include respond(29) {
       padding: 0 2rem;
+    }
+    @include respond(37.5) {
+      // display: none;
+      padding: 0 3rem;
     }
   }
   &__search {
     height: 100%;
     width: 40%;
     @include respond(63) {
-      width: 32%;
+      width: 30%;
     }
+    
     justify-content: start;
     position: relative;
     align-content: center;
     background-color: $color-white;
     display: flex;
+    @include respond(37.5) {
+
+    }
     padding: 1rem 2rem;
     border-radius: 3rem;
     color: $color-black;
@@ -110,17 +119,19 @@
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
-    @include respond(56.25) {
-      display: none;
+    @include respond(37.5) {
+      // display: none;
+      margin: 0 0.5rem 0 2rem;
     }
   }
   &__username {
+    display: inline-block;
     font-size: 2rem;
     font-weight: bold;
     padding-right: 3rem;
     @include respond(29) {
-   display: none;
-  }
+      display: none;
+    }
   }
 }
 .search-bar {

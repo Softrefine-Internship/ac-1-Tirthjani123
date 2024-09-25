@@ -25,7 +25,7 @@
 */
 
 @mixin respond($breakpoint) {
-   @if $breakpoint == 29 {
+  @if $breakpoint == 29 {
     @media (max-width: 29em) {
       @content;
     }
@@ -77,6 +77,9 @@
   padding: 1rem 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
   margin: 0 0 3rem 1rem;
+  @include respond(37.5) {
+    margin: 0 0 4rem 2rem;
+  }
   height: 25rem;
   width: 25rem;
   @include respond(95.25) {
@@ -113,8 +116,10 @@
     bottom: -2rem;
     border-radius: 50rem;
     opacity: 0;
-
     transition: all 0.3s;
+    @include respond(37.5) {
+      bottom: -15px;
+    }
   }
   &::before {
     content: "";
@@ -127,8 +132,10 @@
     transform: translateX(-48%);
     bottom: -10px;
     border-radius: 50rem;
-
     transition: all 0.3s;
+    @include respond(37.5) {
+      bottom: -10px;
+    }
   }
   &:hover {
     &::after,
@@ -145,6 +152,7 @@
 
     .projects__cards__card__row__date {
       font-weight: 700;
+      font-size: 1.2rem;
       color: rgba(0, 0, 0, 0.5);
       @include respond(48) {
         font-size: 1.5rem;
@@ -174,7 +182,7 @@
   .projects__cards__card__main-heading {
     text-align: center;
     margin-top: 2rem;
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: rgba(0, 0, 0, 0.8);
     @include respond(48) {
       font-size: 2.5rem;
@@ -184,6 +192,7 @@
   .projects__cards__card__sub-heading {
     text-align: center;
     margin-top: 0.5rem;
+    font-size: 1.7rem;
     color: rgba(0, 0, 0, 0.5);
     margin-bottom: 2rem;
     @include respond(48) {
@@ -193,9 +202,10 @@
 
   .projects__cards__card__progress-tittle {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: rgba(0, 0, 0, 0.8);
     margin: 0.5rem 0;
+
     @include respond(48) {
       font-size: 1.5rem;
       margin: 1rem 0;
@@ -222,14 +232,16 @@
     margin-left: auto;
     padding: 0.5rem 0;
     font-weight: bold;
-    font-size: 1.1rem;
+    // font-size: 1.1rem
+    font-size: 1.3rem;
     color: rgba(0, 0, 0, 0.8);
   }
 
   .projects__cards__card__border {
     width: inherit;
+    margin: 0.6rem 0;
     margin-left: -1.5rem;
-    margin: 1.6rem 0;
+
     border-bottom: 0.2rem solid rgba(172, 170, 170, 0.1);
     @include respond(95.25) {
       margin-left: -1.4rem;
@@ -260,8 +272,8 @@
       &__1,
       &__2 {
         border: 1px solid $color-white;
-        height: 2rem;
-        width: 2rem;
+        height: 2.5rem;
+        width: 2.5rem;
         border-radius: 50%;
         @include respond(48) {
           height: 3rem;
@@ -270,7 +282,7 @@
       }
 
       &__2 {
-        margin-left: -2px;
+        margin-left: -4px;
       }
     }
 
@@ -305,11 +317,11 @@
       background-color: $button-back-color;
       color: $add-icon-color;
       font-weight: 900;
-
+      font-size: 1.2rem;
       cursor: pointer;
       stroke-width: 10px;
       @include respond(48) {
-        font-size:1.5rem;
+        font-size: 1.5rem;
       }
     }
   }
