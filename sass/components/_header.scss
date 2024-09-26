@@ -24,20 +24,21 @@
       padding: 0 2rem;
     }
     @include respond(37.5) {
-      // display: none;
       padding: 0 3rem;
     }
   }
   &__search {
     margin-bottom: 1rem;
 
-    // height: 100%;
     width: 40%;
     @include respond(63) {
       width: 30%;
     }
-    
-
+    @include respond(29) {
+      width: 100%;
+      margin-right: 1rem;
+      margin-top: 1rem;
+    }
     justify-content: start;
     position: relative;
     align-content: center;
@@ -47,9 +48,13 @@
     border-radius: 3rem;
     color: $color-black;
     font-size: 1.2rem;
+
     &__icon {
       padding-right: 1rem;
-      font-size: 1.5rem;
+      font-size: 2rem;
+      @include respond(37.5) {
+        font-size: 2.5rem;
+      }
     }
     &__input {
       width: 100%;
@@ -73,6 +78,9 @@
     border-radius: 100%;
     color: $color-white;
     background-color: $color-black;
+    @include respond(29) {
+      margin-top: -18rem;
+    }
   }
   &__notification-icon {
     padding: 0 0.5rem;
@@ -89,6 +97,9 @@
   &__notification-div {
     position: relative;
     cursor: pointer;
+    @include respond(29) {
+      margin-top: -18rem;
+    }
   }
   .notification-dot {
     cursor: pointer;
@@ -123,6 +134,9 @@
       // display: none;
       margin: 0 0.5rem 0 2rem;
     }
+    @include respond(29) {
+      margin-top: -18rem;
+    }
   }
   &__username {
     display: inline-block;
@@ -143,4 +157,26 @@
   outline: none;
   font-size: 16px;
   transition: all 0.3s ease;
+}
+
+#popup:not(:target) {
+  display: none;
+}
+#popup:target {
+  display: block;
+}
+.clientMsg1 {
+  background-color: $color-white-faded;
+  position: absolute;
+  display: none;
+  overflow: hidden;
+  top: 53%;
+  left: 56%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  height: 86%;
+  @include respond(29) {
+    top: 56%;
+    height: 87%;
+  }
 }

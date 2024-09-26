@@ -8,6 +8,9 @@
 
   &__heading {
     padding: 2rem 5rem;
+    @include respond(29) {
+      padding: 2rem 2rem;
+    }
     margin-top: 2rem;
     display: flex;
     justify-content: center;
@@ -22,8 +25,12 @@
     }
     &__row2 {
       margin: 0 5rem;
+      @include respond(29) {
+        margin: 0 2rem;
+      }
       display: flex;
       align-items: center;
+
       &__element {
         padding-left: 2rem;
         &__number {

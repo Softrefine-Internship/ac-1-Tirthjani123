@@ -31,6 +31,10 @@ html {
   @include respond(29) {
     font-size: 40%;
   }
+  @include respond(22.5) {
+    font-size: 40%;
+  }
+
   @include respond(112.5) {
     font-size: 62.5%;
   }
