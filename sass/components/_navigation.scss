@@ -4,13 +4,26 @@
   flex-direction: column;
   width: 7rem;
   margin-right: 3rem;
-  @include respond(63){
+  @include respond(63) {
     margin-right: 1rem;
   }
   &:first-child {
     margin-top: 4rem;
   }
   &__profile-icon {
+    &-1 {
+      margin: 1.5rem 0rem;
+      display: inline-block;
+      height: 3.5rem;
+      width: 3.5rem;
+      border-radius: 100%;
+      color: rgba($color: $color-black, $alpha: 0.5);
+      transition: all 0.2s;
+      padding: 0.4rem;
+      transform: scale(1.5);
+      background-color: $color-black;
+      stroke: rgba($color: $color-white, $alpha: 0.8);
+    }
     margin: 1.5rem 0rem;
     display: inline-block;
     height: 3.5rem;

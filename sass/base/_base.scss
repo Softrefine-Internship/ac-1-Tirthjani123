@@ -52,7 +52,7 @@ main {
 
 .content {
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 2fr 1.7fr;
   @include respond(48) {
     grid-template-columns: 1fr;
   }

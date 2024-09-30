@@ -163,7 +163,9 @@
   display: none;
 }
 #popup:target {
-  display: block;
+  @include respond(48) {
+    display: block;
+  }
 }
 .clientMsg1 {
   background-color: $color-white-faded;
@@ -174,7 +176,12 @@
   left: 56%;
   width: 80%;
   transform: translate(-50%, -50%);
-  height: 86%;
+  height: 90%;
+  @include respond(37.5) {
+    top: 56%;
+    height: 85%;
+    width: 85%;
+  }
   @include respond(29) {
     top: 56%;
     height: 87%;

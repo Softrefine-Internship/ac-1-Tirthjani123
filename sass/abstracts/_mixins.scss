@@ -46,7 +46,7 @@
     }
   }
   @if $breakpoint == 63 {
-    @media (max-width: 63em) {
+    @media (max-width: 65em) {
       @content;
     }
   }
@@ -80,7 +80,7 @@
   @include respond(37.5) {
     margin: 0 0 4rem 2rem;
   }
-  height: 25rem;
+  height: 27rem;
   width: 25rem;
   @include respond(95.25) {
     height: 27rem;
@@ -91,7 +91,7 @@
     width: 27rem;
   }
   @include respond(56.25) {
-    height: 25rem;
+    height: 27rem;
     width: 25rem;
   }
   @include respond(48) {

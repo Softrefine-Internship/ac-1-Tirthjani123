@@ -14,10 +14,11 @@
     height: 67vh;
   }
   @include respond(63) {
-    height: 70vh;
+    height: 66vh;
     grid-template-columns: 1fr;
   }
   @include respond(56.25) {
+    height: 76vh;
     grid-template-columns: 1fr 1fr;
     padding: 0 1rem 0 1rem;
   }

@@ -18,7 +18,7 @@ html {
   @media (max-width: 75em) {
     html {
       font-size: 58%; } }
-  @media (max-width: 63em) {
+  @media (max-width: 65em) {
     html {
       font-size: 56%; } }
   @media (max-width: 56.25em) {
@@ -47,7 +47,7 @@ main {
 
 .content {
   display: grid;
-  grid-template-columns: 65% 35%; }
+  grid-template-columns: 2fr 1.7fr; }
   @media (max-width: 48em) {
     .content {
       grid-template-columns: 1fr; } }
@@ -88,7 +88,7 @@ svg {
     font-size: 3rem;
     font-weight: bold;
     padding: 0 7rem; }
-    @media (max-width: 63em) {
+    @media (max-width: 65em) {
       .header .logo-name {
         padding: 0 5rem; } }
     @media (max-width: 29em) {
@@ -109,7 +109,7 @@ svg {
     border-radius: 3rem;
     color: #151522;
     font-size: 1.2rem; }
-    @media (max-width: 63em) {
+    @media (max-width: 65em) {
       .header__search {
         width: 30%; } }
     @media (max-width: 29em) {
@@ -216,8 +216,9 @@ svg {
 #popup:not(:target) {
   display: none; }
 
-#popup:target {
-  display: block; }
+@media (max-width: 48em) {
+  #popup:target {
+    display: block; } }
 
 .clientMsg1 {
   background-color: #F3F6FD;
@@ -228,7 +229,12 @@ svg {
   left: 56%;
   width: 80%;
   transform: translate(-50%, -50%);
-  height: 86%; }
+  height: 90%; }
+  @media (max-width: 37.5em) {
+    .clientMsg1 {
+      top: 56%;
+      height: 85%;
+      width: 85%; } }
   @media (max-width: 29em) {
     .clientMsg1 {
       top: 56%;
@@ -240,7 +246,7 @@ svg {
   flex-direction: column;
   width: 7rem;
   margin-right: 3rem; }
-  @media (max-width: 63em) {
+  @media (max-width: 65em) {
     .navigation {
       margin-right: 1rem; } }
   .navigation:first-child {
@@ -253,6 +259,18 @@ svg {
     border-radius: 100%;
     color: rgba(21, 21, 34, 0.5);
     transition: all 0.2s; }
+    .navigation__profile-icon-1 {
+      margin: 1.5rem 0rem;
+      display: inline-block;
+      height: 3.5rem;
+      width: 3.5rem;
+      border-radius: 100%;
+      color: rgba(21, 21, 34, 0.5);
+      transition: all 0.2s;
+      padding: 0.4rem;
+      transform: scale(1.5);
+      background-color: #151522;
+      stroke: rgba(255, 255, 255, 0.8); }
   .navigation__profile-icon:hover {
     padding: 0.4rem;
     transform: scale(1.5);
@@ -295,7 +313,7 @@ svg {
           font-weight: 900;
           color: black;
           display: block; }
-          @media (max-width: 63em) {
+          @media (max-width: 65em) {
             .projects__heading__row2__element__number {
               font-size: 2rem; } }
         .projects__heading__row2__element__content {
@@ -309,7 +327,7 @@ svg {
         width: 0.8rem;
         border: 1px solid black;
         border-radius: 100%; }
-        @media (max-width: 56.25em) {
+        @media (max-width: 65em) {
           .projects__heading__row2__circle {
             display: none; } }
       .projects__heading__row2__icon__1 {
@@ -343,12 +361,13 @@ svg {
   @media (max-width: 75em) {
     .projects__cards {
       height: 67vh; } }
-  @media (max-width: 63em) {
+  @media (max-width: 65em) {
     .projects__cards {
-      height: 70vh;
+      height: 66vh;
       grid-template-columns: 1fr; } }
   @media (max-width: 56.25em) {
     .projects__cards {
+      height: 76vh;
       grid-template-columns: 1fr 1fr;
       padding: 0 1rem 0 1rem; } }
   @media (max-width: 29em) {
@@ -360,7 +379,7 @@ svg {
     padding: 1rem 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
     margin: 0 0 3rem 1rem;
-    height: 25rem;
+    height: 27rem;
     width: 25rem;
     border-radius: 4rem;
     place-self: center;
@@ -374,13 +393,13 @@ svg {
       .projects__cards__card {
         height: 27rem;
         width: 27rem; } }
-    @media (max-width: 63em) {
+    @media (max-width: 65em) {
       .projects__cards__card {
         height: 27rem;
         width: 27rem; } }
     @media (max-width: 56.25em) {
       .projects__cards__card {
-        height: 25rem;
+        height: 27rem;
         width: 25rem; } }
     @media (max-width: 48em) {
       .projects__cards__card {
@@ -500,7 +519,7 @@ svg {
       @media (max-width: 75em) {
         .projects__cards__card .projects__cards__card__border {
           margin-left: -1.7rem; } }
-      @media (max-width: 63em) {
+      @media (max-width: 65em) {
         .projects__cards__card .projects__cards__card__border {
           margin-left: -1.8rem; } }
       @media (max-width: 56.25em) {
@@ -565,7 +584,7 @@ svg {
     padding: 1rem 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
     margin: 0 0 3rem 1rem;
-    height: 25rem;
+    height: 27rem;
     width: 25rem;
     border-radius: 4rem;
     place-self: center;
@@ -580,13 +599,13 @@ svg {
       .projects__cards__card1 {
         height: 27rem;
         width: 27rem; } }
-    @media (max-width: 63em) {
+    @media (max-width: 65em) {
       .projects__cards__card1 {
         height: 27rem;
         width: 27rem; } }
     @media (max-width: 56.25em) {
       .projects__cards__card1 {
-        height: 25rem;
+        height: 27rem;
         width: 25rem; } }
     @media (max-width: 48em) {
       .projects__cards__card1 {
@@ -706,7 +725,7 @@ svg {
       @media (max-width: 75em) {
         .projects__cards__card1 .projects__cards__card__border {
           margin-left: -1.7rem; } }
-      @media (max-width: 63em) {
+      @media (max-width: 65em) {
         .projects__cards__card1 .projects__cards__card__border {
           margin-left: -1.8rem; } }
       @media (max-width: 56.25em) {
@@ -771,7 +790,7 @@ svg {
     padding: 1rem 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
     margin: 0 0 3rem 1rem;
-    height: 25rem;
+    height: 27rem;
     width: 25rem;
     border-radius: 4rem;
     place-self: center;
@@ -786,13 +805,13 @@ svg {
       .projects__cards__card2 {
         height: 27rem;
         width: 27rem; } }
-    @media (max-width: 63em) {
+    @media (max-width: 65em) {
       .projects__cards__card2 {
         height: 27rem;
         width: 27rem; } }
     @media (max-width: 56.25em) {
       .projects__cards__card2 {
-        height: 25rem;
+        height: 27rem;
         width: 25rem; } }
     @media (max-width: 48em) {
       .projects__cards__card2 {
@@ -912,7 +931,7 @@ svg {
       @media (max-width: 75em) {
         .projects__cards__card2 .projects__cards__card__border {
           margin-left: -1.7rem; } }
-      @media (max-width: 63em) {
+      @media (max-width: 65em) {
         .projects__cards__card2 .projects__cards__card__border {
           margin-left: -1.8rem; } }
       @media (max-width: 56.25em) {
@@ -977,7 +996,7 @@ svg {
     padding: 1rem 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
     margin: 0 0 3rem 1rem;
-    height: 25rem;
+    height: 27rem;
     width: 25rem;
     border-radius: 4rem;
     place-self: center;
@@ -992,13 +1011,13 @@ svg {
       .projects__cards__card3 {
         height: 27rem;
         width: 27rem; } }
-    @media (max-width: 63em) {
+    @media (max-width: 65em) {
       .projects__cards__card3 {
         height: 27rem;
         width: 27rem; } }
     @media (max-width: 56.25em) {
       .projects__cards__card3 {
-        height: 25rem;
+        height: 27rem;
         width: 25rem; } }
     @media (max-width: 48em) {
       .projects__cards__card3 {
@@ -1118,7 +1137,7 @@ svg {
       @media (max-width: 75em) {
         .projects__cards__card3 .projects__cards__card__border {
           margin-left: -1.7rem; } }
-      @media (max-width: 63em) {
+      @media (max-width: 65em) {
         .projects__cards__card3 .projects__cards__card__border {
           margin-left: -1.8rem; } }
       @media (max-width: 56.25em) {
@@ -1226,11 +1245,17 @@ svg {
     backface-visibility: hidden; }
     .clientMsg__message:first-child {
       border-top: none; }
+    @media (max-width: 75em) {
+      .clientMsg__message {
+        gap: 0; } }
     .clientMsg__message__img {
       border-radius: 50%;
       height: 5.5rem;
       width: 5.5rem;
       margin: 0 2rem; }
+      @media (max-width: 75em) {
+        .clientMsg__message__img {
+          margin: 0 1.5rem 0 0; } }
     .clientMsg__message__content {
       width: 100%; }
       .clientMsg__message__content__header {
@@ -1267,11 +1292,11 @@ svg {
 .message {
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 68vh;
+  height: 72vh;
   margin: 1rem; }
   .message::-webkit-scrollbar {
     display: none; }
-  @media (max-width: 63em) {
+  @media (max-width: 65em) {
     .message {
       height: 50vh; } }
   @media (max-width: 75em) {
@@ -1279,7 +1304,7 @@ svg {
       height: 72vh; } }
   @media (max-width: 56.25em) {
     .message {
-      height: 77vh; } }
+      height: 78vh; } }
 
 .doto-icon {
   cursor: pointer;

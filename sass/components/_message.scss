@@ -43,12 +43,21 @@
     padding: 2rem 2rem;
     transition: all 0.1s;
     backface-visibility: hidden;
+    @include respond(75) {
+      
+      gap: 0;
+    }
+    
 
     &__img {
       border-radius: 50%;
       height: 5.5rem;
       width: 5.5rem;
       margin: 0 2rem;
+      @include respond(75) {
+        margin: 0 1.5rem 0 0;
+      }
+      
     }
     &__content {
       width: 100%;
@@ -99,7 +108,7 @@
   }
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 68vh;
+  height: 72vh;
   margin: 1rem;
   &::-webkit-scrollbar {
     display: none;
@@ -111,7 +120,7 @@
     height: 72vh;
   }
   @include respond(56.25) {
-    height: 77vh;
+    height: 78vh;
   }
 }
 .doto-icon {
